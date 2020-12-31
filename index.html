@@ -3,10 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
     <title>201 Breting Way</title>
 
 </head>
 <body>
-    <p> Hello World</p>
+    <!--
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="#">201 Breting Way</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+     -->
+		
+    <section class="home">
+			<div class="intro">
+                <p class="intro-text-1">WELCOME TO</p>
+                <p class="intro-text-2">201 Breting Way</p>
+                <p class="intro-text-3">Placentia, CA 92870</p>
+            </div>
+            <div class="ruler">
+                <hr>
+            </div>
+    </section>
+		
+    <div class="overview">
+			
+			<h1>Overview</h1>
+				<p class="description">	
+                    BEAUTIFUL ONE OF A KIND 5 BEDROOM 2 BATH SINGLE STORY HOME WITH LARGE LOT ON A CUL DE SAC STREET!  ONE OWNER HOME HAS JUST BEEN REMODELED.  NEW LAMINATE FLOOR THRU OUT EXCEPT BATHROOMS.  NEW KITCHEN CABINETS, STONE COUNTERS, NEW 5 BURNER STAINLESS STEEL GAS RANGE, NEW STAINLESS STEEL DISHWASHER, NEW STAINLESS STEEL SINK, NEW GARBAGE DISPOSAL.  BREAKFAST BAR OVERLOOKS THE DINING ROOM.  LARGE LIVING ROOM WITH COZY FIREPLACE OVERLOOKS THE LUSH BACKYARD, LARGE MASTER WITH SLIDING DOOR TO THE BACK YARD, AND SPA.  ADJOINING MASTER BATH WITH NEW VANITY, STONE COUNTER,SINK & TOILET, WALK IN SHOWER.  4 GUEST BEDROOMS. GUEST BATH HAS  TUB OVER SHOWER  NEW VANITY WITH STONE COUNTER, SINK AND NEW TOILET.  NEW NEUTRAL PAINT THRU OUT. NEW ELECTRICAL OUTLETS AND SWITCHES, NEW DOOR KNOBS, HVAC UNIT IS ONLY 7 YEARS OLD. FENCED IN SPA WITH NEW HEATER.  VIEWING DECK, GAZABO, MANY FRUIT TREES IN SIDE YARD. THIS HOME IS MOVE IN READY.  CLOSE TO SHOPPING, TRANSPORTATION, FREEWAYS, AND SCHOOLS.
+			</p>
+    </div>
+    
+
+      <ul class="flex-container">
+        <li class="flex-item">Price: $799,950</li>
+        <li class="flex-item">Bedrooms: 5 </li>
+        <li class="flex-item">Bathrooms: 2</li>
+        <li class="flex-item"> Square ft: 1764</li>
+        <li class="flex-item"> 
+          <a class="fowlertext" href="https://www.zillow.com/homes/201-Breting-Way-Placentia,-CA,-92870_rb/25381281_zpid/" target="_blank" ><div class="flex-container2">
+            <div class="flex-item2"> <img class="fowlerclass" src="imgs/fowler.jpg"></div> 
+            <div class="flex-item2 fowlertext">  Michelle Fowler</div>
+          </div>
+        </a>
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="row">
+        <div class="column">
+          <img src="imgs/centerview.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="imgs/deck.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="imgs/gazebo 2.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="imgs/kitchen.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+      </div>
+      
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+      
+          <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="imgs/centerview.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="imgs/deck.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="imgs/gazebo 2.jpg" style="width:100%">
+          </div>
+          
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="imgs/kitchen.jpg" style="width:100%">
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+      
+      
+          <div class="column">
+            <img class="demo cursor" src="imgs/centerview.jpg" style="width:100%" onclick="currentSlide(1)" alt="Front yard">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="imgs/deck.jpg" style="width:100%" onclick="currentSlide(2)" alt="Deck">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="imgs/gazebo 2.jpg" style="width:100%" onclick="currentSlide(3)" alt="Backyard and Patio">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="imgs/kitchen.jpg" style="width:100%" onclick="currentSlide(4)" alt="Kitchen">
+          </div>
+        </div>
+      </div>
+
+
+<!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+
+<script>
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+    
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
 </body>
 </html>
